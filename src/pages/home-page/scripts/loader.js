@@ -1,5 +1,5 @@
 
 export function loader(textButon, loader) {
-    textButon.classList.toggle("proceded");
-    loader.classList.toggle("active");
+    textButon.classList.add("proceded");
+    loader.classList.add("active");
 }
