@@ -12,13 +12,33 @@
 
 <body>
   <div id="home-page">
-
-    <buton class="lds-ellipsis">Proceed to Payment
-      <div class="loader"></div>
-      <div class="loader"></div>
-      <div class="loader"></div>
-      <div class="loader"></div>
-    </buton>
+    <div class="orderSummary">
+      <img class="orderSummary__img" src="./public/images/AdobeStock_33183051.png" alt="girl listening to music">
+      <div class="orderSummary-info">
+        <h1 class="orderSummary-info__tile">Order Summary</h1>
+        <p class="orderSummary-info__description"></p>
+      </div>
+      <div class="orderSummary-selectedPlan">
+        <div class="orderSummary-selectedPlan__img-wrapper">
+          <img class="orderSummary-selectedPlan__icon" src="./public/images/music.svg" alt="eight note connected icon">
+        </div>
+        <div class="orderSummary-selectedPlan__info">
+          <h2 class="orderSummary-selectedPlan__name">Annual Plan</h2>
+          <p class="orderSummary-selectedPlan__price">$58.99 / year</p>
+        </div>
+        <div class="orderSummary-selectedPlan__planChange">
+          <a href="#">Change</a>
+        </div>
+      </div>
+      <button class="submitButton">
+        Proceed to Payment
+        <div class="button-loader">
+          <div class="loader-dot"></div>
+          <div class="loader-dot"></div>
+          <div class="loader-dot"></div>
+        </div>
+      </button>
+    </div>
   </div>
 
   <script type="module" src="/src/global-scripts/main.js"></script>
