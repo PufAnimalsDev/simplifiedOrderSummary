@@ -3,6 +3,14 @@
 
 import '../styles/home-page.scss'
 
-import { setupCounter } from '../../../global-scripts/scripts/counter/counter.js'
+import { loader } from './loader.js'
 
-setupCounter(document.querySelector('#counter'))
+
+document.querySelector('.orderSummary-submitButton')
+    .addEventListener(
+        'click', () =>
+        loader(
+            document.querySelector('.submitButton__text'),
+            document.querySelector('.button-loader')
+        )
+    );

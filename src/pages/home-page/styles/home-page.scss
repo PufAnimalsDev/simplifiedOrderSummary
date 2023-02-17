@@ -1,71 +1,274 @@
 /// Homepage Styles File
 /// Here we import all the Styles files we need for our Homepage.
 
-/// buton 
 
-.button-loader {
-    display: inline-block;
-    position: relative;
-    display: none;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=DM+Sans:wght@500&display=swap');
 
-}
+#home-page {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
 
-.button-loader div {
-    position: absolute;
-    top: -5px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: red;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
-}
+    & .orderSummary {
+        margin: 113px auto;
+        background-color: #FFFFFF;
+        border: 1px solid #000000;
+        border-radius: 16px;
+        max-width: 344px;
 
-.button-loader div:nth-child(1) {
-    left: 8px;
-    animation: lds-ellipsis1 0.6s infinite;
-}
+        @media(min-width: 992px) {
+            max-width: 460px;
+        }
 
-.button-loader div:nth-child(2) {
-    left: 8px;
-    animation: lds-ellipsis2 0.6s infinite;
-}
+        &__img--desktop {
+            display: none;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
 
-.button-loader div:nth-child(3) {
-    left: 32px;
-    animation: lds-ellipsis2 0.6s infinite;
-}
+            @media(min-width: 992px) {
+                display: block;
+            }
+        }
 
-.lds-ellipsis div:nth-child(4) {
-    left: 56px;
-    animation: lds-ellipsis3 0.6s infinite;
-}
+        &__img--mobile {
+            width: 100%;
+            border-radius: 15px 15px 0 0;
 
-@keyframes lds-ellipsis1 {
-    0% {
-        transform: scale(0);
-    }
+            @media(min-width: 992px) {
+                display: none;
+            }
+        }
 
-    100% {
-        transform: scale(1);
-    }
-}
+        &-info {
+            margin-top: 40px;
+            padding: 0 16px;
+            text-align: center;
 
-@keyframes lds-ellipsis3 {
-    0% {
-        transform: scale(1);
-    }
+            @media(min-width: 992px) {
+                padding: 0 32.5px;
+            }
 
-    100% {
-        transform: scale(0);
-    }
-}
+            &__title {
+                font-size: 24px;
+                line-height: 33px;
+                color: #151827;
 
-@keyframes lds-ellipsis2 {
-    0% {
-        transform: translate(0, 0);
-    }
+                @media(min-width: 992px) {
+                    font-size: 32px;
+                }
+            }
 
-    100% {
-        transform: translate(24px, 0);
+            &__description {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 160%;
+                letter-spacing: -0.01em;
+                color: #85859B;
+
+                @media(min-width: 992px) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-selectedPlan {
+            margin: 32px 16px 0;
+            background: #F8F9FE;
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+
+            &__img-wrapper {
+                border-right: #CFD1DD 1px solid;
+            }
+
+            &__icon {
+                padding-right: 20px;
+            }
+
+            &__info {
+                padding: 0px;
+
+                @media(min-width: 992px) {
+                    margin-right: 112px;
+                }
+
+                h2 {
+                    margin: 2px 0;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #151827;
+
+                    @media(min-width: 992px) {
+                        font-size: 18px;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 160%;
+                    letter-spacing: -0.01em;
+                    color: #85859B;
+
+                    @media(min-width: 992px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            &__planChange {
+                a {
+                    font-size: 14px;
+                    line-height: 160%;
+                    text-align: right;
+                    letter-spacing: -0.01em;
+                    color: #680262;
+
+                    @media(min-width: 992px) {
+                        font-size: 16px;
+                    }
+                }
+
+                a:hover {
+                    background: #680262;
+                    color: #fff;
+                    padding: 5px;
+                    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+                    text-decoration: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        &-submitButton {
+            margin: 32px 16px 0;
+            width: calc(100% - 32px);
+            height: 56px;
+            background-color: #680262;
+            border: none;
+            border-radius: 16px;
+            color: #FFFFFF;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: #490245;
+            }
+
+            span {
+                font-size: 16px;
+                line-height: 160%;
+                text-align: center;
+                letter-spacing: -0.01em;
+            }
+
+            span.proceded {
+                display: none;
+            }
+
+            @keyframes lds-ellipsis1 {
+                0% {
+                    transform: scale(0);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            @keyframes lds-ellipsis3 {
+                0% {
+                    transform: scale(1);
+                }
+
+                100% {
+                    transform: scale(0);
+                }
+            }
+
+            @keyframes lds-ellipsis2 {
+                0% {
+                    transform: translate(0, 0);
+                }
+
+                100% {
+                    transform: translate(24px, 0);
+                }
+            }
+
+            .button-loader {
+                display: none;
+
+                &.active {
+                    width: 100%;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    margin-left: calc(50% - 39px);
+                }
+
+                div {
+                    position: absolute;
+                    top: 20px;
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 50%;
+                    background: #F8F9FE;
+                    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+
+                    &:nth-child(1) {
+                        left: 8px;
+                        animation: lds-ellipsis1 0.6s infinite;
+                    }
+
+                    &:nth-child(2) {
+                        left: 8px;
+                        animation: lds-ellipsis2 0.6s infinite;
+                    }
+
+                    &:nth-child(3) {
+                        left: 32px;
+                        animation: lds-ellipsis2 0.6s infinite;
+                    }
+                }
+            }
+
+            .lds-ellipsis {
+                div {
+                    &:nth-child(4) {
+                        left: 56px;
+                        animation: lds-ellipsis3 0.6s infinite;
+                    }
+                }
+            }
+
+        }
+
+        &-cancel {
+            padding: 20px 0 28px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 160%;
+            letter-spacing: -0.01em;
+
+            @media(min-width: 992px) {
+                font-size: 16px;
+            }
+
+            a {
+                color: #151827;
+            }
+
+            a:hover {
+                color: #490245;
+            }
+        }
     }
 }

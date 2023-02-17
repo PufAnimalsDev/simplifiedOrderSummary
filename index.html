@@ -13,14 +13,16 @@
 <body>
   <div id="home-page">
     <div class="orderSummary">
-      <img class="orderSummary__img" src="./public/images/AdobeStock_33183051.png" alt="girl listening to music">
+      <img class="orderSummary__img--mobile" src="images/AdobeStock_331830515m.png" alt="girl listening to music">
+      <img class="orderSummary__img--desktop" src="images/AdobeStock_33183051.png" alt="girl listening to music">
       <div class="orderSummary-info">
-        <h1 class="orderSummary-info__tile">Order Summary</h1>
-        <p class="orderSummary-info__description"></p>
+        <h1 class="orderSummary-info__title">Order Summary</h1>
+        <p class="orderSummary-info__description">You're close! Confirm your purchase and complete your order in the
+          next step</p>
       </div>
       <div class="orderSummary-selectedPlan">
         <div class="orderSummary-selectedPlan__img-wrapper">
-          <img class="orderSummary-selectedPlan__icon" src="./public/images/music.svg" alt="eight note connected icon">
+          <img class="orderSummary-selectedPlan__icon" src="images/music.svg" alt="eight note connected icon">
         </div>
         <div class="orderSummary-selectedPlan__info">
           <h2 class="orderSummary-selectedPlan__name">Annual Plan</h2>
@@ -30,14 +32,19 @@
           <a href="#">Change</a>
         </div>
       </div>
-      <button class="submitButton">
-        Proceed to Payment
-        <div class="button-loader">
-          <div class="loader-dot"></div>
-          <div class="loader-dot"></div>
-          <div class="loader-dot"></div>
-        </div>
-      </button>
+      <a href="#">
+        <button class="orderSummary-submitButton">
+          <span class="submitButton__text">Proceed to Payment</span>
+          <div class="button-loader">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+          </div>
+        </button>
+      </a>
+      <div class="orderSummary-cancel">
+        <a href="#">Cancel Order</a>
+      </div>
     </div>
   </div>
 
